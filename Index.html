@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KronosPvP - Serveur Minecraft</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+                url("https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=2000&q=80")
+                center/cover fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff3b3b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff3b3b;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 75px;
+            text-shadow: 0 5px 20px black;
+        }
+
+        .hero h1 span {
+            color: #ff3b3b;
+        }
+
+        .hero p {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #ddd;
+        }
+
+        .ip {
+            margin-top: 30px;
+            padding: 15px 25px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #ff3b3b;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .play {
+            background: #ff3b3b;
+            color: white;
+        }
+
+        .discord {
+            background: #5865F2;
+            color: white;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            filter: brightness(1.15);
+        }
+
+        .info {
+            padding: 70px 10%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.75);
+        }
+
+        .info h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #080808;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚔ KronosPvP</div>
+
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#serveur">Serveur</a>
+        <a href="https://discord.gg/aSa3gxAUys" target="_blank">Discord</a>
+    </nav>
+</header>
+
+<section class="hero" id="accueil">
+
+    <h1>KRONOS<span>PVP</span></h1>
+
+    <p>Entre dans l'arène. Prépare-toi au combat.</p>
+
+    <div class="ip" onclick="copyIP()">
+        🎮 kronospvp.minecraft.how
+    </div>
+
+    <div class="buttons">
+        <a class="button play" href="#serveur">
+            ⚔ JOUER MAINTENANT
+        </a>
+
+        <a class="button discord"
+           href="https://discord.gg/aSa3gxAUys"
+           target="_blank">
+            💬 REJOINDRE LE DISCORD
+        </a>
+    </div>
+
+</section>
+
+<section class="info" id="serveur">
+
+    <h2>⚔ KronosPvP</h2>
+
+    <p>
+        Bienvenue sur KronosPvP !
+        Rejoins notre communauté et viens affronter
+        les autres joueurs sur le serveur.
+    </p>
+
+    <br>
+
+    <strong>IP du serveur :</strong>
+    <br>
+    <span style="color:#ff3b3b;">
+        kronospvp.minecraft.how
+    </span>
+
+</section>
+
+<footer>
+    © 2026 KronosPvP — Tous droits réservés.
+</footer>
+
+<script>
+function copyIP() {
+    navigator.clipboard.writeText("kronospvp.minecraft.how");
+
+    alert("IP copiée ! 🎮");
+}
+</script>
+
+</body>
+</html>
